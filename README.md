@@ -452,7 +452,9 @@ Potential future improvements include:
 
 ## Team
 
-Academic PBL Project  
+Mr. Ayush Tomar
+Mr. Mohammed Mudassir Siddiqui
+Mr. Alihasan Vidhani
 **Academic Year: 2026–27**
 
 ---
