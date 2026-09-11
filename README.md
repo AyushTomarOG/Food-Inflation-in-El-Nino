@@ -60,7 +60,7 @@ A multivariate LSTM model is used with:
 - Food Inflation
 - ONI
 
-The model uses a **12-month lookback window** to create sequential training samples.
+The model uses a **18-month lookback window** to create sequential training samples.
 
 Architecture:
 
