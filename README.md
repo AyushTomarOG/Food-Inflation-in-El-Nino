@@ -143,22 +143,28 @@ For all four metrics:
 
 ## Current Results
 
-The current model comparison is:
+All models are evaluated on the same chronological unseen test period:
 
-| Model | MAE | RMSE | sMAPE (%) | MASE | Avg. Rank |
+**January 2024 – December 2025**
+
+Lower values indicate better forecasting performance.
+
+| Model | MAE | RMSE | sMAPE (%) | MASE | Average Rank |
 |---|---:|---:|---:|---:|---:|
-| **LSTM Baseline** | **1.316956** | **1.658211** | **44.185169** | **0.978711** | **1.00** |
-| LSTM + ONI | 4.201831 | 4.984564 | 90.559779 | 3.122639 | 2.25 |
-| Prophet | 4.524748 | 5.100074 | 103.685090 | 3.362619 | 3.25 |
-| ARIMAX | 5.116283 | 6.968454 | 86.691679 | 3.802225 | 3.50 |
+| **LSTM Baseline** | **1.333475** | **1.645970** | **43.889998** | **0.990987** | **1.00** |
+| **LSTM + ONI** | **1.524525** | **1.942188** | **49.637119** | **1.132969** | **2.00** |
+| ARIMAX | 4.654987 | 6.305485 | 85.443703 | 3.459407 | **3.00** |
+| Prophet | 5.016948 | 6.685004 | 87.403752 | 3.728403 | **4.00** |
 
 ### Current Observation
 
-The **LSTM Baseline currently performs best across all four evaluation metrics**.
+The **LSTM Baseline performs best across all four evaluation metrics**, achieving the lowest MAE, RMSE, sMAPE and MASE.
 
-This indicates that, in the current experiment, using historical food inflation alone produced more accurate forecasts than the models that incorporated ONI.
+The **LSTM + ONI** model ranks second. Although incorporating ONI improves the LSTM compared with earlier experiments, it does not outperform the historical-food-inflation-only baseline on the final unseen test period.
 
-The results are experimental and may change as the forecasting pipeline and feature engineering are further refined.
+**ARIMAX** ranks third, while **Prophet** ranks fourth under the same evaluation protocol.
+
+The results indicate that historical food-inflation patterns provide the strongest predictive signal in this experiment, while ONI provides additional information but does not improve the final forecast enough to surpass the baseline.
 
 ---
 
