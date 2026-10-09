@@ -1,0 +1,23 @@
+{
+  "name": "food-inflation-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "start": "NODE_ENV=production node server.js",
+    "preview": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7"
+  }
+}
